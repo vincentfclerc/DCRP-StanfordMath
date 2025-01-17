@@ -201,10 +201,6 @@ DIMENSIONAL_EQUIVALENCES = {
 
 ALL_CONVERSIONS = [
     LENGTH_CONVERSIONS,
-    TIME_CONVERSIONS,
-    MASS_CONVERSIONS,
-    SPEED_CONVERSIONS,
-    ...
 ]
 # Example possible randomization ranges for known variables
 # key: variable name, value: (min, max)
