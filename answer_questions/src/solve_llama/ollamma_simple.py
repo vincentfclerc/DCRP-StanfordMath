@@ -2,7 +2,14 @@ import pandas as pd
 import re
 from ollama import chat  # or from ollama import Ollama if you prefer an OO approach
 import logging
+# ---------------------------------------------------------------------
+# Custom libraries
+# ---------------------------------------------------------------------
+library_path = "/Users/vincentclerc/Documents/codes_lusenn/main-lusenn/SUBSEA-fatigue/subsea/src/libraries/"
 
+# Add the folder to sys.path if it's not already included
+if library_path not in sys.path:
+    sys.path.append(library_path)
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 

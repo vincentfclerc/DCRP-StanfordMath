@@ -1,0 +1,1155 @@
+Level US;Level FR;Question;Variables;Variables (no units);Formula;Test Answer;Numeric answer;Units 1;Solve function;Full Answer;Final Snippet
+9;Seconde;A body starts from a point with an initial speed of \( v_0 = 10 \, \mathrm{m/s} \) and a constant acceleration of \( a = 2 \, \mathrm{m/s^2} \). What is the distance traveled after \( t = 5 \, \mathrm{s} \)?;v0=10 m/s, a=2 m/s^2, t=5 s;v0:10, a:2, t:5;v0 * t + 0.5 * a * (t**2);The distance traveled is given by the formula: \[ x = v_0 t + \frac{1}{2} a t^2 \] Substituting the values: \[ x = 10 \cdot 5 + \frac{1}{2} \cdot 2 \cdot 5^2 = 50 + 25 = 75 \, \mathrm{m} \] The distance traveled is therefore \( x = 75 \, \mathrm{m} \).;75;m;"def solve(v0;a;t): dist=v0*t+0.5*a*(t**2);return f'{dist} m'";"Q1
+To find the distance traveled by the body, we'll use the equation for uniformly accelerated motion:
+\[ s(t) = v_0t + \frac{1}{2}at^2 \]
+
+Given:
+- Initial speed: \( v_0 = 10 \, \mathrm{m/s} \)
+- Acceleration: \( a = 2 \, \mathrm{m/s^2} \)
+- Time: \( t = 5 \, \mathrm{s} \)
+
+First, we substitute the given values into the equation:
+\[ s(5) = (10 \, \mathrm{m/s})\times(5 \, \mathrm{s}) + \frac{1}{2}(2 \, \mathrm{m/s^2})(5 \, \mathrm{s})^2 \]
+
+Simplifying inside the parentheses and then performing the multiplication:
+\[ s(5) = 50 \, \mathrm{m} + \frac{1}{2}\times 2 \, \mathrm{m/s^2} \times 25 \, \mathrm{s}^2 \]
+\[ s(5) = 50 \, \mathrm{m} + (2 \, \mathrm{m})\times 25 \, \mathrm{s^2/s^2} \]
+
+Here, we notice that \( \frac{1}{2}\times 2=1 \), and since the units of acceleration and time squared cancel out in the last multiplication, it simplifies to just a number (without units):
+\[ s(5) = 50 + 25 \]
+\[ s(5) = 75 \]
+
+Therefore,
+<A> 75 m <\A>";75 m
+7;5;A person walks at a constant speed of \( v = 1.5 \, \mathrm{m/s} \) for \( t = 10 \, \mathrm{s} \). What distance do they cover?;v=1.5 m/s, t=10 s;v:1.5, t:10;v * t;The distance traveled is given by: \[ x = v \cdot t \] Substituting the values: \[ x = 1.5 \cdot 10 = 15 \, \mathrm{m} \] The distance traveled is therefore \( x = 15 \, \mathrm{m} \).;15;m;"def solve(v;a;t): dist=v*t;return f'{dist} m'";"To find the distance covered by the person, we can use the formula for distance:
+
+Distance = Speed × Time
+
+Given:
+- Speed (\( v \)) = \( 1.5 \, \mathrm{m/s} \)
+- Time (\( t \)) = \( 10 \, \mathrm{s} \)
+
+Plugging in the values into the distance formula:
+
+Distance = \( 1.5 \, \mathrm{m/s} \times 10 \, \mathrm{s} \)
+
+To find the product of speed and time (which is in seconds), we multiply them together:
+
+Distance = \( 15 \, \mathrm{m} \)
+
+Therefore, the person covers a distance of:
+<A> 15 m <\A>";15 m
+9;2;An object falls freely from rest. What distance does it cover after \( t = 3 \, \mathrm{s} \), assuming a gravitational acceleration of \( g = 9.8 \, \mathrm{m/s^2} \)?;g=9.8 m/s^2, t=3 s;g:9.8, t:3;0.5 * g * (t**2);The distance traveled is given by: \[ x = \frac{1}{2} g t^2 \] Substituting the values: \[ x = \frac{1}{2} \cdot 9.8 \cdot 3^2 = 4.9 \cdot 9 = 44.1 \, \mathrm{m} \] The distance traveled is therefore \( x = 44.1 \, \mathrm{m} \).;44.1;m;"def solve(g;a;t): dist=0.5*g*(t**2);return f'{dist} m'";"To find the distance covered by an object falling freely under gravity, we can use the equation for the position of an object under constant acceleration:
+
+\[ x(t) = x_0 + v_0 t + \frac{1}{2} a t^2 \]
+
+Here:
+- \(x_0\) is the initial position (which is 0 in this case since it starts from rest),
+- \(v_0\) is the initial velocity (also 0, since it starts from rest),
+- \(a\) is the acceleration due to gravity (\(9.8 \, \mathrm{m/s^2}\)),
+- \(t\) is the time elapsed.
+
+Given values are:
+- \( g = 9.8 \, \mathrm{m/s^2} \),
+- \( t = 3 \, \mathrm{s} \).
+
+Plugging these into our equation:
+
+\[ x(3) = 0 + 0(3) + \frac{1}{2} (9.8 \, \mathrm{m/s^2})(3 \, \mathrm{s})^2 \]
+
+\[ x(3) = 0 + 0 + \frac{1}{2} (9.8)(9) \]
+
+\[ x(3) = 0 + 0 + \frac{1}{2}(88.2) \]
+
+\[ x(3) = 44.1 \, \mathrm{m} \]
+
+So, after \( t = 3 \, \mathrm{s} \), the object has covered a distance of:
+
+<A> 44.1 m <\A>";44.1 m
+11;0;A projectile is launched vertically upward with an initial velocity of \( v_0 = 20 \, \mathrm{m/s} \). What is the maximum height reached by the projectile? Assume \( g = 9.8 \, \mathrm{m/s^2} \).;v0=20 m/s, g=9.8 m/s^2;v0:20, g:9.8;(v0**2)/(2*g);The maximum height is given by: \[ h = \frac{v_0^2}{2 g} \] ...;20.41;m;"def solve(v0;a;g): h=(v0**2)/(2*g);return f'{h} m'";"Q1
+Step 1: Identify the given parameters and what we need to find.
+- Initial velocity (\( v_0 \)) is 20 m/s.
+- Acceleration due to gravity (g) is 9.8 m/s^2.
+- We want to find the maximum height (h) reached by the projectile.
+
+Step 2: Recall that the maximum height of a projectile launched vertically upward can be found using the equation derived from the kinematic equations where \( v = v_0 \) at the highest point:
+\[ v^2 = v_0^2 - 2gh \]
+Since we're looking for h, and rearranging to solve for it gives us:
+\[ h = \frac{v_0^2}{2g} \]
+
+Step 3: Substitute the given values into the equation.
+- \( v_0 = 20 \, \mathrm{m/s} \)
+- \( g = 9.8 \, \mathrm{m/s^2} \)
+
+\[ h = \frac{(20)^2}{2(9.8)} \]
+
+Step 4: Perform the calculation to find h.
+\[ h = \frac{400}{19.6} \]
+\[ h ≈ 20.41 \, \mathrm{m} \]
+
+So, the maximum height reached by the projectile is approximately:
+<A> 20.41 m <\A>";20.41 m
+Undergraduate;L3;An electron is in a one-dimensional infinite potential well of width \( L = 1 \, \mathrm{nm} \). What is the wavelength associated with the ground state (\( n = 1 \))?;L=1 nm, n=1;L:1, n:1;2*L/n;For an infinite potential well, ...;2 * 10^-9;m;"def solve(L_nm;a;n): lam=2*L_nm/n;return f'{lam} nm'";"Q1
+Step 1: Identify the relevant formula for the energy levels in an infinite potential well.
+For a one-dimensional infinite potential well of width L, the energy levels are given by:
+\[ E_n = \frac{n^2 h^2}{8 m L^2} \]
+
+where n is the quantum number (n = 1, 2, 3,...), h is Planck's constant, and m is the mass of the particle.
+
+Step 2: Determine the energy for the ground state (n = 1).
+Since we are looking for the wavelength associated with the ground state, we need to find the energy E_1.
+\[ E_1 = \frac{1^2 h^2}{8 m L^2} = \frac{h^2}{8 m L^2} \]
+
+Step 3: Use the de Broglie relation to find the wavelength associated with this energy.
+The de Broglie relation states that:
+\[ E = \frac{p^2}{2m} \]
+We can rearrange this equation to solve for p:
+\[ p = \sqrt{2 m E} \]
+
+Using the de Broglie relation, we can find the wavelength λ associated with the energy E_1.
+Since momentum is given by:
+\[ p = h / \lambda \]
+
+Step 4: Substitute values and calculate the wavelength.
+
+First, convert L from nm to m:
+
+L = 1 nm = 1 * (10^-9) m
+
+Planck's constant in J s is approximately equal to 6.626 * 10^-34.
+
+The mass of an electron is approximately equal to 9.109 * 10^-31 kg.
+
+Now, substitute the values into the formula for E_1:
+\[ E_1 = \frac{h^2}{8 m L^2} = \frac{(6.626 * 10^{-34})^2}{8 (9.109 * 10^{-31}) (1 * 10^-18)^2} = 6.025 * 10^-17 J \]
+
+Next, find the momentum p:
+\[ p = \sqrt{2 m E_1} = \sqrt{(2)(9.109*10^{-31})(6.025*10^{-17})} = 3.024*10^{-23} kg.m/s \]
+
+Finally, use the de Broglie relation to find the wavelength λ:
+\[ p = h / \lambda \]
+Rearrange to solve for λ:
+\[ \lambda = h / p \]
+
+Substitute values:
+\[ \lambda = (6.626 * 10^{-34}) / (3.024*10^-23) \approx 2.19 * 10^-11 m \]
+
+Therefore, the wavelength associated with the ground state is approximately:
+
+<A> 2.19 * 10^-11 m <\A>";2.19 * 10^-11 m
+Graduate;M1;Consider a dense star (such as a white dwarf) with a radius of \( R = 5000 \, \mathrm{km} \). What is the Schwarzschild radius (\( R_s \)) associated if the star collapses into a black hole? Use \( G = 6.674 \cdot 10^{-11} \, \mathrm{m^3 \cdot kg^{-1} \cdot s^{-2}} \), \( c = 3.00 \cdot 10^8 \, \mathrm{m/s} \), and a typical stellar mass \( M = 2 \cdot 10^{30} \, \mathrm{kg} \).;G=6.674e-11, M=2e30 kg, c=3.00e8 m/s;G:6.674e-11, M:2e30, c:3.00e8;(2 * G * M)/(c**2);The Schwarzschild radius ... ~ 2.97 * 10^3 m;2.97 * 10^3;m;"def solve(G;M;c): Rs=(2*G*M)/(c**2);return f'{Rs} m'";"Q1
+The Schwarzschild radius (R_s) can be calculated using the formula R_s = 2GM/c^2, where G is the gravitational constant, M is the mass of the star, and c is the speed of light. We need to ensure that all quantities are in SI units.
+
+Given values:
+- R = 5000 km (radius of the star)
+- G = 6.674 * 10^-11 m^3 kg^-1 s^-2
+- c = 3.00 * 10^8 m/s
+- M = 2 * 10^30 kg
+
+First, convert the radius from kilometers to meters:
+R = 5000 km = 5,000,000 m (not needed since we're calculating R_s, which does not depend on R)
+
+Next, plug in the values for G, c, and M into the formula R_s = 2GM/c^2:
+
+R_s = 2 * (6.674 * 10^-11 m^3 kg^-1 s^-2) * (2 * 10^30 kg) / ((3.00 * 10^8 m/s)^2)
+
+Now, perform the arithmetic:
+R_s = (2 * 6.674 * 10^-11 * 2 * 10^30) / (9 * 10^16)
+R_s = (2.67 * 10^-5 kg^3 s^-2) / (9 * 10^16 m^2/s^2)
+
+To calculate this, multiply the numerator first and then divide by the denominator:
+(2.67 * 10^-5) / (9 * 10^16) = 2.967 * 10^-22
+
+However, to maintain precision for our calculation involving very large numbers, consider the factors in front of the powers of ten separately:
+
+R_s = ((2.67 * 10^-5) * (2 * 10^30)) / ((9 * 10^16))
+= ((2.67 * 2) * (10^-5 + 30)) / ((9) * 10^(16 - 5))
+= (5.34 * 10^25) / (9 * 10^11)
+
+Separate the factors in front of the powers of ten:
+R_s = (5.34 * 10^12) / (9)
+Now calculate this:
+R_s = 593.333... meters
+
+To write our answer according to the required format, we should actually maintain a significant number of digits given the original input values.
+Thus,
+Q1
+The Schwarzschild radius is approximately R_s ≈ <A> 5.93 * 10^2 m <\A>.";5.93 * 10^2 m
+Grad/Doc;M2/Doc;An ultra-relativistic neutrino travels with an energy of \( E = 1 \, \mathrm{TeV} \). What is its associated Compton wavelength? (Use \( h = 6.626 \cdot 10^{-34} \, \mathrm{J \cdot s} \) and \( c = 3.00 \cdot 10^8 \, \mathrm{m/s} \)).;h=6.626e-34 J*s, c=3.00e8 m/s, E=1 TeV;h:6.626e-34, c:3.00e8, E:1;(h*c)/E;The wavelength is given by: \[ \lambda = (h c)/E \] ...;1.24 * 10^-18;m;"def solve(h;c;E): lam=(h*c)/E;return f'{lam} m'";"Q1
+To find the Compton wavelength associated with the energy of the ultra-relativistic neutrino, we need to use the formula for the energy of a particle in special relativity, which is \( E = mc^2 \), and then solve for the rest mass \( m \) from this equation. With the rest mass determined, we can find the Compton wavelength using the standard formula:
+
+\[ \lambda_C = \frac{h}{mc} \]
+
+Given that the neutrino has an energy of \( 1 \, \mathrm{TeV} = 10^12 \, \mathrm{eV} = 10^{21} \, \mathrm{J/s} \), we first solve for its rest mass:
+
+\[ m = \frac{E}{c^2} \]
+
+Using the given value of \( E = 1 \, \mathrm{TeV} \) and plugging in the values of \( h \), \( c \), and converting the energy to Joules:
+\[ m = \frac{10^{21}}{(3.00 \cdot 10^8)^2} = \frac{10^{21}}{9.00 \cdot 10^{16}} \]
+
+Calculating this gives us:
+\[ m = 1.11 \times 10^{-4} \, \mathrm{kg} \]
+
+Now that we have the rest mass \( m \), we can calculate the Compton wavelength using the standard formula:
+\[ \lambda_C = \frac{h}{mc} \]
+Plugging in the values for \( h \), \( m \) as calculated above, and \( c \):
+\[ \lambda_C = \frac{(6.626 \cdot 10^{-34})}{(1.11 \times 10^{-4})(3.00 \cdot 10^8)} \]
+
+Performing this calculation gives us the Compton wavelength of:
+\[ \lambda_C \approx 2.42 \times 10^{-17} \, \mathrm{m} \]
+
+Therefore,
+<A> $2.42 \times 10^{-17}$ [m] <\A>";$2.42 \times 10^{-17}$ [m]
+10;1;A car travels at a constant speed of \( v = 60 \, \mathrm{mph} \) for \( t = 2 \, \mathrm{hours} \). How far does it travel?;v=60 mph, t=2 h;v:60, t:2;v * t;Distance is given by \[ x = v \cdot t \] ...=120 miles.;120;miles;"def solve(v;a;t): dist=v*t;return f'{dist} miles'";"To find the distance traveled by the car, we can use the formula:
+
+\[ d = vt \]
+
+where:
+- \( d \) is the distance traveled,
+- \( v \) is the constant speed of the car (which needs to be converted from miles per hour to meters per second),
+- \( t \) is the time during which the car travels at this speed.
+
+First, we need to convert the speed from miles per hour to meters per second:
+\[ 1 \, \mathrm{mile} = 1609.34 \, \mathrm{meters}, \]
+\[ 1 \, \mathrm{hour} = 3600 \, \mathrm{seconds}. \]
+
+Therefore,
+\[ v = 60 \, \frac{\mathrm{miles}}{\mathrm{hour}} = 60 \times \frac{1609.34 \, \mathrm{meters}}{1 \, \mathrm{mile}} \times \frac{1}{3600 \, \mathrm{hours}} = \frac{96.57624 \, \mathrm{meters}}{\mathrm{second}}. \]
+
+Now that we have the speed in meters per second and the time in seconds, we can calculate the distance:
+\[ d = vt = 96.57624 \, \frac{\mathrm{meters}}{\mathrm{second}} \times 7200 \, \mathrm{seconds} = 695890.88 \, \mathrm{meters}. \]
+
+Thus,
+<A> 695891 meters <\A>";695891 meters
+Undergraduate;L3;A mass-spring system has \( k = 200 \, \mathrm{N/m} \) and \( m = 0.5 \, \mathrm{kg} \). What is the angular frequency \(\omega\)?;k=200 N/m, m=0.5 kg;k:200, m:0.5;(k/m)**0.5;The angular frequency ...=20 rad/s.;20;rad/s;"def solve(k;a;m): w=(k/m)**0.5;return f'{w} rad/s'";"Q1
+Step 1: Recall the formula for calculating the angular frequency of a mass-spring system.
+The angular frequency \(\omega\) can be calculated using the formula:
+\[ \omega = \sqrt{\frac{k}{m}} \]
+where \( k \) is the spring constant and \( m \) is the mass.
+
+Step 2: Plug in the given values for \( k \) and \( m \).
+Given that \( k = 200 \, \mathrm{N/m} \) and \( m = 0.5 \, \mathrm{kg} \), we can substitute these values into the formula:
+\[ \omega = \sqrt{\frac{200 \, \mathrm{N/m}}{0.5 \, \mathrm{kg}}} \]
+
+Step 3: Perform the calculation inside the square root.
+First, divide \( k \) by \( m \):
+\[ \frac{k}{m} = \frac{200 \, \mathrm{N/m}}{0.5 \, \mathrm{kg}} = 400 \, \mathrm{rad^2/s^2} \]
+Then, take the square root of this result:
+\[ \omega = \sqrt{400 \, \mathrm{rad^2/s^2}} = 20 \, \mathrm{rad/s} \]
+
+Step 4: Write down the final answer in the required format.
+<A> 20 rad/s <\A>";20 rad/s
+7;5;A marathon length is a\approximately \(26.2 \, \mathrm{miles}\). Convert this distance into kilometers, given \(1 \, \mathrm{mile} \approx 1.609 \, \mathrm{km}\).;distance_miles=26.2, 1mile=1.609;distance_miles:26.2, 1mile:1.609;distance_miles * 1.609;Converting ... ~42.16 km;42.16;km;"def solve(distance_miles;a): dist_km=distance_miles*a;return f'{dist_km} km'";"Q1
+To convert the distance of a marathon length from miles to kilometers, we need to multiply the number of miles by the conversion factor (in this case, the number of kilometers per mile).
+
+Given that \(1 \, \mathrm{mile} \approx 1.609 \, \mathrm{km}\), we can set up the following equation:
+
+\(26.2 \, \mathrm{miles} \times 1.609 \, \mathrm{km/mile}\)
+
+First, multiply the number of miles by the conversion factor:
+\(26.2 \times 1.609 = 42.18\)
+
+Now we have the distance in kilometers.
+
+<A> 42.18 km <\A>";42.18 km
+Graduate;M1;A star with luminosity \( L = 3.828 \times 10^{26} \, \mathrm{W} \) (like the Sun) illuminates a planet at distance \( d = 1.496 \times 10^{11} \, \mathrm{m} \). What is the intensity at that distance?;L=3.828e26 W, d=1.496e11 m;L:3.828e26, d:1.496e11;L/(4*pi*(d**2));Intensity=...=1360 W/m^2;1360;W/m^2;"def solve(L;a;d): import math;I=L/(4*math.pi*(d**2));return f'{I} W/m^2'";"Q1
+To find the intensity at the given distance from the star, we'll use the formula:
+
+Intensity (I) = Luminosity (L) / Surface area of a sphere (A)
+
+Since the surface area of a sphere with radius \( r \) is given by \( A = 4\pi r^2 \), and in this case, the distance \( d \) from the star to the planet plays the role of \( r \), we can write:
+
+Intensity (I) = Luminosity (L) / (4πd²)
+
+First, let's plug in the given values for luminosity and distance.
+
+Given:
+- Luminosity (L) = 3.828 × 10^{26} W
+- Distance (d) = 1.496 × 10^{11} m
+
+Now, substitute these into our formula:
+
+Intensity (I) = Luminosity (L) / (4πd²)
+              = (3.828 × 10^{26}) / ((4 × π × (1.496 × 10^{11})^2)
+
+Next, let's calculate the value of \( d^2 \):
+
+\( d^2 = (1.496 \times 10^{11} m)^2 = 2.23936 \times 10^{22} m^2 \)
+
+Now plug this into our formula:
+
+Intensity (I) = (3.828 × 10^{26}) / ((4 × π × 2.23936 × 10^{22}))
+
+Perform the multiplication inside the denominator first:
+
+\( 4\pi(1.496)^2 = 4 \times \pi \times 2.23936 \times 10^{22} ≈ 8.794 \times 10^{23} m^2 \)
+
+Now let's do the division to find the intensity:
+
+Intensity (I) = (3.828 × 10^{26}) / (8.794 × 10^{23})
+              ≈ 0.435 W/m²
+
+Therefore, the intensity at that distance is approximately:
+<A> 0.435 W/m^2 <\A>";0.435 W/m^2
+8;5;A cyclist rides at a speed of \( v = 20 \, \mathrm{km/h} \) for \( t = 30 \, \mathrm{minutes} \). What distance do they cover in meters?;v=20 km/h, t=30 min;v:20, t:30;v * t;First convert time => hours ... => 10000 m;10000;m;"def solve(v;a;t): th=t/60;dist_km=v*th;dist_m=dist_km*1000;return f'{dist_m} m'";"To find the distance covered by the cyclist, we first need to convert their speed from kilometers per hour to meters per second.
+
+\( v = 20 \, \mathrm{km/h} = 20 \times \frac{1000 \, \mathrm{m}}{3600 \, \mathrm{s}} = \frac{20000}{3600} \, \mathrm{m/s} = 5.5556 \, \mathrm{m/s} \)
+
+Now that we have the speed in meters per second, we can multiply it by the time to find the distance.
+
+\( d = v \times t = 5.5556 \, \mathrm{m/s} \times 30 \, \mathrm{s} = 166.667 \, \mathrm{m} \)
+
+So, the cyclist covers a distance of approximately:
+
+<A> 166.7 m <\A>";166.7 m
+12;0;A comet travels at \( v = 40 \, \mathrm{km/s} \) for \( t = 1 \, \mathrm{day} \). How far does it travel in kilometers? (1 day = 86400 s);v=40 km/s, t=1 day=86400 s;v:40, t:86400;v * t;=3,456,000 km;3456000;km;"def solve(v;a;t): dist=v*t;return f'{dist} km'";"To find the distance traveled by the comet, we need to use the formula:
+
+\[d = vt\]
+
+where:
+- \(v\) is the velocity of the comet (\(40 \, \mathrm{km/s}\))
+- \(t\) is the time for which it travels (\(1 \, \mathrm{day} = 86400 \, \mathrm{s}\))
+
+First, we need to convert both values to a consistent unit. The velocity is already given in kilometers per second (\(\mathrm{km/s}\)), so we don't need to change that. Time needs to be converted from seconds to days for consistency, but since the question involves converting time into seconds, no conversion of time is actually necessary here.
+
+Now, let's substitute the values:
+
+\[d = (40 \, \mathrm{km/s}) \times (86400 \, \mathrm{s})\]
+
+The units are consistent (\(\mathrm{km} \times \mathrm{s}\)), which simplifies to kilometers. 
+
+Multiplying these numbers gives us:
+\[d = 40 \times 86400 = 3456000 \, \mathrm{km}\]
+
+So, the comet travels \(3,456,000 \, \mathrm{km}\) in a day.
+
+<A> 3456000 km <\A>";3456000 km
+Undergraduate;L2;An object moves at \( 50 \, \mathrm{cm/s} \) for \( 200 \, \mathrm{s} \). How far does it travel in meters?;v=50 cm/s, t=200 s;v:50, t:200;v * t;=100 m;100;m;"def solve(v;a;t): dist_cm=v*t;dist_m=dist_cm/100;return f'{dist_m} m'";"Q1
+To find the distance traveled by the object, we need to use the formula for displacement (distance traveled), which is given by:
+
+\( d = v \times t \)
+
+where:
+- \( d \) is the distance (displacement) traveled,
+- \( v \) is the velocity of the object (\( 50 \, \mathrm{cm/s} \)),
+- \( t \) is the time for which the object moves (\( 200 \, \mathrm{s} \)).
+
+However, we need to convert the initial velocity from centimeters per second to meters per second since the final distance needs to be in meters. There are 100 centimeters in a meter, so:
+
+\( v = 50 \, \mathrm{cm/s} = 0.5 \, \mathrm{m/s} \)
+
+Now we can calculate the distance traveled using the formula:
+
+\( d = 0.5 \, \mathrm{m/s} \times 200 \, \mathrm{s} = 100 \, \mathrm{m} \)
+
+So, the object travels a total distance of \( 100 \) meters.
+
+<A> 100 m <\A>";100 m
+11;1;A plane flies at \( v = 900 \, \mathrm{km/h} \) for \( t = 2.5 \, \mathrm{h} \). How far does it travel in kilometers?;v=900 km/h, t=2.5 h;v:900, t:2.5;v * t;=2250 km;2250;km;"def solve(v;a;t): dist=v*t;return f'{dist} km'";"Q1
+The distance traveled by the plane is given by the product of its velocity and time.
+\( d = v \times t \)
+Given values:
+\( v = 900 \, \mathrm{km/h} \) (velocity)
+\( t = 2.5 \, \mathrm{h} \) (time)
+
+Substituting these into the formula gives us:
+\( d = 900 \times 2.5 \, \mathrm{km.h}^{-1}\times\mathrm{h} \)
+Using the fact that \( \mathrm{km/h}^{-1}\times\mathrm{h}= \mathrm{km} \), we can simplify this to:
+\( d = 2250 \, \mathrm{km} \)
+
+So the plane travels a distance of:
+
+<A> 2250 km <\A>";2250 km
+4;CM2;A student runs at a constant speed of \( v = 2 \, \mathrm{m/s} \) for \( t = 300 \, \mathrm{s} \). How far does the student run in meters?;v=2 m/s, t=300 s;v:2, t:300;v * t;=600 m;600;m;"def solve(v;a;t): dist=v*t;return f'{dist} m'";"Q1
+To find out how far the student runs, we can use the formula for distance traveled at a constant speed:
+
+distance (d) = speed (v) × time (t)
+
+Given:
+v = 2 m/s and t = 300 s
+
+The formula is d = v × t. Plugging in the given values, we get:
+
+d = 2 m/s × 300 s
+= 600 m
+
+Therefore, the student runs a distance of <A> 600 m <\A>.";600 m
+8;5;A cyclist expends energy at a rate of \( 200 \, \mathrm{W} \) for \( 600 \, \mathrm{s} \). How much energy is used in Joules?;P=200 W, t=600 s;P:200, t:600;P * t;=120000 J;120000;J;"def solve(P;a;t): E=P*t;return f'{E} J'";"Q1
+Step 1: Understand the problem. We need to calculate the total energy expended by the cyclist.
+Step 2: Recall that power (rate of energy expenditure) is given by \( P = \frac{E}{t} \), where \( E \) is the energy and \( t \) is time in seconds.
+Step 3: Rearrange the formula to solve for energy: \( E = P \times t \).
+Step 4: Substitute the given values into the equation. Power (\( P \)) is \( 200 \, \mathrm{W} \), which is equivalent to \( 200 \, \frac{\mathrm{J}}{\mathrm{s}} \) (since power in Watts is defined as Joules per second), and time (\( t \)) is \( 600 \, \mathrm{s} \).
+Step 5: Perform the calculation: \( E = 200 \, \frac{\mathrm{J}}{\mathrm{s}} \times 600 \, \mathrm{s} = 120,000 \, \mathrm{J} \).
+
+<A> 120,000 J <\A>";120,000 J
+9;Seconde;A temperature changes from \( 20 \, ^\circ\mathrm{C} \) to \( 68 \, ^\circ\mathrm{F} \). Convert \( 68 \, ^\circ\mathrm{F} \) to Celsius using \( T_{C} = (T_{F}-32) \times \frac{5}{9} \).;T_F=68 °F;T_F:68;(T_F - 32)*(5/9);Substitute =>20 C;20;C;"def solve(TF): TC=(TF-32)*(5/9);return f'{TC} C'";"Q1
+To convert the temperature from Fahrenheit (\( 68 \, ^\circ\mathrm{F} \)) to Celsius, we can use the formula:
+\[ T_{C} = (T_{F}-32) \times \frac{5}{9} \]
+Where \( T_{C} \) is the temperature in degrees Celsius and \( T_{F} \) is the temperature in degrees Fahrenheit.
+
+Step 1: Subtract 32 from the given temperature in Fahrenheit (\( 68 \, ^\circ\mathrm{F} \))
+\[ T_{F}-32 = 68 - 32 = 36 \]
+
+Step 2: Multiply the result by \( \frac{5}{9} \)
+\[ (T_{F}-32) \times \frac{5}{9} = 36 \times \frac{5}{9} = 20 \]
+
+So, the temperature in degrees Celsius is:
+< A > 20 °C < /A >";
+9;Seconde;A truck travels \( 360 \, \mathrm{mi} \) at an average speed of \( 60 \, \mathrm{mph} \). How many hours does the journey take?;x=360 mi, v=60 mph;x:360, v:60;x / v;=6 h;6;h;"def solve(x;a;v): t=x/v;return f'{t} h'";"Q1
+To find out how many hours the journey takes, we need to divide the total distance traveled by the average speed.
+
+Step 1: Convert the speed from miles per hour (mi/h) to a unitless value.
+We don't actually need to convert anything for this step since we're already working in units that are compatible with each other. So we can move on to:
+
+Step 2: Set up an equation using the formula time equals distance divided by speed.
+time = \( \frac{distance}{speed} \)
+
+Step 3: Plug in the given values into our equation.
+distance = \( 360 \, \mathrm{mi} \)
+speed = \( 60 \, \mathrm{mph} \)
+time = \( \frac{360}{60} \)
+
+
+Step 4: Solve for time.
+time = \( 6 \, \mathrm{h} \)
+
+
+<A> 6 h <\A>";6 h
+Undergraduate;L1;You deposit \$500 into a savings account with an annual interest rate of 5%. How much interest do you earn in one year (no compounding)?;Principal=500, Rate=5%;Principal:500, Rate:5;Principal * Rate;\$25 from \( 500 \times 0.05 \).;25;USD;"def solve(Principal;a;Rate): interest=Principal*(Rate/100);return f'${interest}'";"To find the amount of interest earned, we need to calculate the difference between the principal (initial) deposit and the final balance after one year.
+
+Given:
+Principal (P) = $500
+Annual Interest Rate (r) = 5% = 0.05 (as a decimal)
+Time (t) = 1 year
+
+The formula for simple interest is:
+
+Interest (I) = P × r × t
+
+Plugging in the values, we get:
+
+Interest (I) = $500 × 0.05 × 1
+= $25
+
+So, you earn $25 in one year.
+
+<A> Interest earned: $25 <\A>";Interest earned: $25
+11;Term;A patient weighs \( 70 \, \mathrm{kg} \). A medication dose is \(2 \, \mathrm{mg/kg}\). How many milligrams of medication are administered?;weight=70 kg, dosage=2 mg/kg;weight:70, dosage:2;weight * mg_per_kg;\( 70 \times 2 = 140 \, \mathrm{mg} \).;140;mg;"def solve(weight;a;dosage): total=weight*dosage;return f'{total} mg'";"To find the total amount of medication in milligrams, we need to multiply the patient's weight by the medication dose.
+
+Step 1: Identify the variables
+- Weight (W) = 70 kg
+- Medication dose (dose) = 2 mg/kg
+
+Step 2: Convert units if necessary
+In this case, no conversion is needed because both units are in kilograms and milligrams, respectively.
+
+Step 3: Apply the formula
+Medication administered (total_dose) = Weight × medication dose 
+= \(70 \times 2\) 
+= 140 mg
+
+Now we can format the final answer as requested:
+<A> 140 mg <\A>
+Q1";140 mg
+7;5;A car travels \( 100 \, \mathrm{km} \) at a speed of \( 50 \, \mathrm{km/h} \). How long does it take in hours?;x=100 km, v=50 km/h;x:100, v:50;x / v;=2 h;2;h;"def solve(x;a;v): t=x/v;return f'{t} h'";"Q1
+To find the time taken by the car to travel \( 100 \, \mathrm{km} \), we can use the formula:
+
+\[ \text{Time} = \frac{\text{Distance}}{\text{Speed}} \]
+
+In this case, the distance is given as \( 100 \, \mathrm{km} \) and the speed of the car is given as \( 50 \, \mathrm{km/h} \).
+
+Substituting these values into the formula gives us:
+
+\[ \text{Time} = \frac{100 \, \mathrm{km}}{50 \, \mathrm{km/h}} = 2 \, \mathrm{h} \]
+
+Therefore, it takes the car \( <A> 2 \, \mathrm{hours} </A> \) to travel \( 100 \, \mathrm{km} \) at a speed of \( 50 \, \mathrm{km/h} \).";
+10;1;An airplane flies at \( v = 250 \, \mathrm{m/s} \) for \( t = 10 \, \mathrm{min} \). What distance does it cover in kilometers? (1 min = 60 s);v=250 m/s, t=10 min=600 s;v:250, t:600;v * t;Convert 10 min to 600 s: ...=150000 m=150 km;150;km;"def solve(v;a;t): dist_m=v*t;dist_km=dist_m/1000;return f'{dist_km} km'";"To find the distance covered by the airplane, we need to use the formula:
+
+\[ d = v \times t \]
+
+where \( d \) is the distance, \( v \) is the speed of the airplane, and \( t \) is the time for which it flies.
+
+Given:
+- Speed (\( v \)) = 250 m/s
+- Time (\( t \)) = 10 min = 600 s (since 1 min = 60 s)
+
+Substituting these values into the formula gives:
+
+\[ d = 250 \, \mathrm{m/s} \times 600 \, \mathrm{s} \]
+
+\[ d = 150,000 \, \mathrm{m} \]
+
+To convert meters to kilometers, we divide by 1000 (since 1 km = 1000 m):
+
+\[ d = \frac{150,000}{1000} \, \mathrm{km} \]
+
+\[ d = 150 \, \mathrm{km} \]
+
+Therefore, the airplane covers a distance of:
+
+<A> 150 km <\A>";150 km
+12;0;A force of \( F = 10 \, \mathrm{N} \) is applied to a mass of \( m = 2 \, \mathrm{kg} \). What is the acceleration in \(\mathrm{m/s^2}\)?;F=10 N, m=2 kg;F:10, m:2;F / m;Acceleration: \( 10/2 = 5 \, \mathrm{m/s^2} \).;5;m/s^2;"def solve(F;a;m): a_=F/m;return f'{a_} m/s^2'";"Q1
+According to Newton's second law of motion, the force (F) applied to an object is equal to its mass (m) multiplied by its acceleration (a):
+\[ F = m \times a \]
+Rearrange this equation to solve for acceleration:
+\[ a = \frac{F}{m} \]
+
+Substitute the given values for F and m into this equation:
+\[ a = \frac{10\, \mathrm{N}}{2\, \mathrm{kg}} \]
+
+To simplify this expression, divide 10 by 2:
+\[ a = 5 \, \mathrm{m/s^2} \]
+ 
+< A > 5 m/s^2 < /A >";
+Doctorate;PhD;A star is observed at a distance of \( 10 \, \mathrm{parsec} \). Convert this distance into light-years, given \(1 \, \mathrm{pc} \approx 3.26 \, \mathrm{ly}\).;distance_pc=10, 1pc=3.26 ly;distance_pc:10, 1pc:3.26;distance_pc * 3.26;\( 10 \times 3.26 = 32.6 \, \mathrm{ly} \).;32.6;ly;"def solve(distance_pc;a): dist_ly=distance_pc*a;return f'{dist_ly} ly'";"Q1
+To convert the distance of the star from parsecs to light-years, we will use the conversion factor provided.
+
+Step 1: Understand the problem and identify the given information.
+- Distance in parsecs = \(10\)
+- Conversion factor (\(1 \, \mathrm{pc} \approx 3.26 \, \mathrm{ly}\))
+
+Step 2: Recall the formula to apply the unit conversion.
+- To convert from one unit of measurement to another, we multiply by the ratio of the new unit to the old unit. The formula is \(d_\text{new} = d_\text{old} \times \frac{\mathrm{new\ unit}}{\mathrm{old\ unit}}\).
+
+Step 3: Apply the conversion factor.
+- Substitute the given values into the formula:
+\[10 \, \mathrm{pc} \times \frac{1 \, \mathrm{ly}}{1 \, \mathrm{pc}} \times \frac{3.26 \, \mathrm{ly}}{1 \, \mathrm{ly}}\]
+
+Step 4: Simplify the expression.
+- Since \(1\) and \(1\) cancel out, leaving us with just \(10 \, \mathrm{pc} \) multiplied by \(3.26\), we can calculate:
+\[d_\text{new} = 10 \times 3.26 = 32.6 \, \mathrm{ly}\]
+
+Step 5: State the final answer in the required format.
+<A> 32.6 ly <\A>";32.6 ly
+Undergraduate;L2;A data storage device has a capacity of \( 2 \, \mathrm{GB} \). Convert this to MB if \(1 \, \mathrm{GB} = 1024 \, \mathrm{MB}\).;GB=2, 1GB=1024 MB;GB:2, 1GB:1024;GB * 1024;\( 2 \times 1024 = 2048 \, \mathrm{MB} \).;2048;MB;"def solve(GB;a): MB=GB*a;return f'{MB} MB'";"Q1
+Given that the data storage device has a capacity of \( 2 \, \mathrm{GB} \) and knowing that \( 1 \, \mathrm{GB} = 1024 \, \mathrm{MB} \), we can find the capacity in MB by multiplying \( 2 \, \mathrm{GB} \) with the conversion factor.
+
+To convert GB to MB, we use:
+\[ 1 \, \mathrm{GB} = 1024 \, \mathrm{MB} \]
+
+Multiplying both sides by 2 gives us:
+
+\[ 2 \, \mathrm{GB} = 2 \times 1024 \, \mathrm{MB} = 2048 \, \mathrm{MB} \]
+
+Therefore,
+
+<A> 2048 MB </A>";
+5;CE2;A balloon of circumference is measured as \( 30 \, \mathrm{cm} \). If its diameter is a\approximately circumference/\(\pi\), find the diameter in cm (use \(\pi \approx 3.14\)).;circumference=30 cm, pi=3.14;circumference:30, pi:3.14;circumference / pi;\( 30/3.14 \approx 9.55 \, \mathrm{cm} \).;9.55;cm;"def solve(circ;pi): d=circ/pi;return f'{d} cm'";"Q1
+Step 1: Recall the formula for the circumference of a circle.
+The formula for the circumference (\(C\)) of a circle is given by \( C = 2 \pi r \), where \(r\) is the radius.
+
+Step 2: Express the diameter in terms of the circumference and pi.
+Given that the diameter (\(d\)) is approximately equal to the circumference divided by \(\pi\), we have:
+\( d \approx \frac{C}{\pi} \).
+
+Step 3: Substitute the given value for the circumference into the expression for diameter.
+Substituting \( C = 30 \, \mathrm{cm} \) and \( \pi \approx 3.14 \) into the equation:
+\( d \approx \frac{30}{3.14} \).
+
+Step 4: Perform the division to find the numerical value of the diameter.
+Calculating the value of the expression gives us:
+\( d \approx 9.57 \, \mathrm{cm} \).
+
+
+Therefore,
+<A> 9.57 cm <\A>";9.57 cm
+12;Terminale;A spacecraft travels at a speed of \( v = 15 \, \mathrm{km/s} \) for \( t = 2 \, \mathrm{hours} \). What distance does it cover?;v=15 km/s, t=2 h=7200 s;v:15, t:7200;v * t;\( 15 \times 7200 = 108,000 \, \mathrm{km} \).;108000.0;km;"def solve(v;a;t): dist=v*t;return f'{dist} km'";"Q1
+To find the distance covered by the spacecraft, we need to use the formula for distance:
+
+\( d = v \times t \)
+
+First, let's convert the time from hours to seconds since the speed is given in km/s. We know that 1 hour = 3600 seconds.
+
+So, \( t = 2 \, \mathrm{hours} = 2 \times 3600 = 7200 \, \mathrm{seconds} \)
+
+Now we can plug in the values:
+
+\( d = v \times t = 15 \, \mathrm{km/s} \times 7200 \, \mathrm{s} = 108000 \, \mathrm{km} \)
+
+Therefore, the spacecraft covers a distance of:
+<A> 108000 km <\A>";108000 km
+Undergraduate;L3;A gas expands isothermally, doubling its volume. If the initial pressure was \( P_1 = 100 \, \mathrm{kPa} \), what is the final pressure?;P1=100 kPa;P1:100;P1/2;For isothermal expansion ... \( P_2 = 50 \, \mathrm{kPa} \).;50;kPa;"def solve(P1): p2=P1/2;return f'{p2} kPa'";"Q1
+For an isothermal process, we can use Boyle's Law, which states that at constant temperature, the product of the pressure and volume of a gas remains constant. Mathematically, this is expressed as:
+
+\[ P_1 V_1 = P_2 V_2 \]
+
+Given:
+- Initial pressure (\( P_1 \)) = 100 kPa
+- Final volume (\( V_2 \)) = 2\( V_1 \) (since the volume doubles)
+
+We need to find the final pressure (\( P_2 \)). Substituting the given values into Boyle's Law:
+
+\[ P_1 V_1 = P_2 V_2 \]
+\[ P_2 = P_1 \times \frac{V_2}{V_1} \]
+
+Since \( V_2 = 2 V_1 \), we substitute this relationship directly into the equation for \( P_2 \):
+
+\[ P_2 = 100 \, \mathrm{kPa} \times 2 \]
+\[ P_2 = 200 \, \mathrm{kPa} \]
+
+So, the final pressure after doubling the volume is 200 kPa.
+
+<A> 200 [kPa] <\A>";200 [kPa]
+Graduate;M1;An ideal gas undergoes adiabatic expansion. If the initial temperature is \( T_1 = 300 \, \mathrm{K} \) and the final temperature is \( T_2 = 150 \, \mathrm{K} \), what is the ratio of the final volume to the initial volume (\( V_2 / V_1 \))?;T1=300 K, T2=150 K, gamma=1.4;T1:300, T2:150, gamma:1.4;(T1/T2)**(1/(gamma-1));For an adiabatic process ... ratio \( 2.64 \).;2.64;;"def solve(T1;a;T2;gamma): ratio=(T1/T2)**(1/(gamma-1));return f'{ratio}'";"Q1
+For an ideal gas undergoing adiabatic expansion, we know that \( pV^\gamma = \mathrm{constant} \) and also that \( T V^{\gamma - 1} = \mathrm{constant} \), where \( \gamma \) is the adiabatic index.
+Given:
+\( T_1 = 300 \, \mathrm{K} \)
+\( T_2 = 150 \, \mathrm{K} \)
+
+Since the process is adiabatic for an ideal gas, we can use the relation \( T V^{\gamma - 1} = \mathrm{constant} \). This allows us to write:
+\[ T_1 V_1^{\gamma - 1} = T_2 V_2^{\gamma - 1} \]
+
+We want to find the ratio of the final volume (\( V_2 \)) to the initial volume (\( V_1 \)), so we rearrange the equation:
+\[ \frac{V_2}{V_1} = \left(\frac{T_1}{T_2}\right)^{\frac{1}{\gamma - 1}} \]
+
+Given that \( T_1 = 300 \, \mathrm{K} \), \( T_2 = 150 \, \mathrm{K} \), and assuming the adiabatic index \( \gamma \) is approximately \( 1.4 \) (this value may vary slightly based on specific gas properties but is commonly used for many gases in a wide range of conditions), we can substitute these values into our equation:
+\[ V_2 / V_1 = \left(\frac{300}{150}\right)^{\frac{1}{1.4 - 1}} \]
+
+Simplifying inside the parentheses first, and then simplifying the exponent:
+\[ V_2 / V_1 = (2)^{\frac{1}{0.4}} \]
+\[ V_2 / V_1 = (2)^{2.5} \]
+Since \( 2^2 = 4 \), raising it to a fractional power requires us to consider the multiplication of that result by an additional factor derived from the remaining part of the exponent:
+\[ (2)^2 \times (2)^\frac{1}{2} \times (2)^\frac{1}{2} \]
+This simplifies to:
+\[ 4 \times \sqrt{2} \times \sqrt{2} = 4 \times 2 = 8 \]
+
+So, the ratio of the final volume (\( V_2 \)) to the initial volume (\( V_1 \)) is \( 8 \).
+
+<A> 8 <\A>";8
+Doctorate;PhD;A black hole emits Hawking radiation at a temperature of \( T = 10^{-8} \, \mathrm{K} \). What is the corresponding peak wavelength? Use Wien's Law: \( \lambda = \frac{b}{T} \) where \( b = 2.9 \cdot 10^{-3} \, \mathrm{m \cdot K} \).;T=1e-8 K, b=2.9e-3 m*K;T:1e-8, b:2.9e-3;b / T;\( 2.9e-3 / 1e-8 = 2.9e5 \, \mathrm{m} \).;290000.0;m;"def solve(b;a;T): lam=b/T;return f'{lam} m'";"Q1
+To find the peak wavelength of Hawking radiation emitted by a black hole at a given temperature, we can use Wien's Law. The formula provided is:
+\[ \lambda = \frac{b}{T} \]
+where \( b \) is a constant with a value of \( 2.9 \cdot 10^{-3} \, \mathrm{m \cdot K} \), and \( T \) is the temperature in Kelvin.
+
+Step 1: Identify the values given in the problem.
+The temperature \( T \) at which Hawking radiation is emitted by the black hole is given as \( 10^{-8} \, \mathrm{K} \). The constant \( b \) has a value of \( 2.9 \cdot 10^{-3} \, \mathrm{m \cdot K} \).
+
+Step 2: Substitute the given values into Wien's Law formula.
+Substitute the temperature \( T = 10^{-8} \, \mathrm{K} \) and the constant \( b = 2.9 \cdot 10^{-3} \, \mathrm{m \cdot K} \) into the formula \( \lambda = \frac{b}{T} \).
+
+\[ \lambda = \frac{2.9 \cdot 10^{-3} \, \mathrm{m \cdot K}}{10^{-8} \, \mathrm{K}} \]
+
+Step 3: Calculate the value of lambda.
+Now, calculate the value of \( \lambda \) by dividing the numerator by the denominator.
+
+\[ \lambda = 2.9 \cdot 10^{5} \, \mathrm{m} \]
+
+Therefore, the peak wavelength corresponding to the temperature at which a black hole emits Hawking radiation is:
+<A> 290000 m <\A>";290000 m
+10;Première;A piston-cylinder device contains \( 0.1 \, \mathrm{m^3} \) of air at \( 300 \, \mathrm{K} \). The volume triples isobarically. What is the final temperature?;V1=0.1 m^3, T1=300 K;V1:0.1, T1:300;3*T1;\( T_2 = 3 \times 300 = 900 \, \mathrm{K} \).;900.0;K;"def solve(V1;a;T1): T2=3*T1;return f'{T2} K'";"Q1
+To find the final temperature of the air after it has tripled in volume isobarically, we need to follow a step-by-step process considering the principles of thermodynamics, specifically focusing on the ideal gas law and its implications under constant pressure.
+
+Step 1: Understanding the given conditions
+- Initial volume (\( V_1 \)) = \( 0.1 \, \mathrm{m^3} \)
+- Initial temperature (\( T_1 \)) = \( 300 \, \mathrm{K} \)
+- Final volume (\( V_2 \)) is three times the initial volume (since it triples), so \( V_2 = 3V_1 = 3 \times 0.1 \, \mathrm{m^3} = 0.3 \, \mathrm{m^3} \)
+
+Step 2: Applying the ideal gas law under constant pressure
+The ideal gas law is given by:
+\[ PV = nRT \]
+where \( P \) is the pressure, \( V \) is the volume, \( n \) is the number of moles of the gas, \( R \) is the gas constant, and \( T \) is the temperature in Kelvin.
+
+Since we are dealing with an isobaric process (constant pressure), the ideal gas law can be simplified to:
+\[ V = nRT/P \]
+
+However, for comparing temperatures before and after a change in volume under constant pressure, it's more convenient to express this relation as:
+\[ T_1 V_1 /P = T_2 V_2 /P \]
+Since \( P \) is constant, it cancels out on both sides of the equation. Therefore, we have:
+\[ T_1 V_1 = T_2 V_2 \]
+
+Step 3: Solving for the final temperature (\( T_2 \))
+Given that \( V_2 = 3V_1 \), we substitute this into our simplified equation to solve for \( T_2 \):
+\[ T_2 = T_1 \times (V_1 / V_2) \]
+Substituting the known values:
+\[ T_2 = 300 \, \mathrm{K} \times (0.1 \, \mathrm{m^3} / 0.3 \, \mathrm{m^3}) \]
+
+Calculating \( T_2 \):
+\[ T_2 = 300 \, \mathrm{K} \times \frac{1}{3} \]
+\[ T_2 = 100 \, \mathrm{K} \]
+
+Therefore, the final temperature of the air after it has tripled in volume isobarically is:
+<A> 100 K <\A>";100 K
+9;Seconde;A chemical reaction releases \( Q = 5000 \, \mathrm{J} \) of heat. If this heat raises the temperature of \( m = 2 \, \mathrm{kg} \) of water, what is the temperature change? Assume specific heat capacity \( c = 4184 \, \mathrm{J/(kg \cdot K)} \).;Q=5000 J, m=2 kg, c=4184 J/(kg*K);Q:5000, m:2, c:4184;Q/(m*c);\( 5000/(2 \times 4184) = 0.598 \, \mathrm{K} \).;0.598;K;"def solve(Q;a;m;c): dT=Q/(m*c);return f'{dT} K'";"Q1
+To find the temperature change, we can use the formula:
+\[ Q = mc\Delta T \]
+Where:
+- \( Q \) is the heat released (given as 5000 J),
+- \( m \) is the mass of water (given as 2 kg),
+- \( c \) is the specific heat capacity of water (given as 4184 J/(kg·K)), and
+- \( \Delta T \) is the temperature change we're trying to find.
+
+Rearranging the formula to solve for \( \Delta T \):
+\[ \Delta T = \frac{Q}{mc} \]
+
+Plugging in the values:
+\[ \Delta T = \frac{5000\, \mathrm{J}}{(2\, \mathrm{kg})(4184\, \mathrm{J/(kg \cdot K)})} \]
+
+Calculating \( \Delta T \):
+\[ \Delta T = \frac{5000}{8468} \]
+\[ \Delta T ≈ 0.59\, \mathrm{K} \]
+
+So the temperature change is approximately 0.59 degrees Kelvin.
+
+<A> 0.59 K <\A>";0.59 K
+Undergraduate;L2;A satellite orbits Earth at a distance of \( r = 6.7 \cdot 10^6 \, \mathrm{m} \). What is its orbital speed? Use \( g = 9.8 \, \mathrm{m/s^2} \).;r=6.7e6 m, g=9.8 m/s^2;r:6.7e6, g:9.8;(g*r)**0.5;Orbital speed: \( \sqrt{9.8 \times 6.7\times10^6} = 8100 \,\mathrm{m/s}. \);8100.0;m/s;"def solve(r;a;g): v=(g*r)**0.5;return f'{v} m/s'";"Q1
+To find the orbital speed of the satellite, we can use the formula for centripetal acceleration:
+
+\( a_c = \frac{v^2}{r} \)
+
+where \( v \) is the orbital speed and \( r \) is the distance from Earth's center.
+
+The gravitational force between Earth and the satellite provides the necessary centripetal force to keep it in orbit, so we can equate this with the formula for centripetal acceleration:
+
+\( F_g = m g = m \frac{v^2}{r} \)
+
+Since we're solving for \( v \), we want to isolate it on one side of the equation. First, multiply both sides by \( r \) and then divide by \( m \):
+
+\( m g r = v^2 \)
+
+Now take the square root of both sides:
+
+\( v = \sqrt{m g r} \)
+
+We know that the mass of Earth is not needed to solve this problem since we can treat it as a fixed point, so we'll omit it from the formula.
+
+Given values:
+- \( r = 6.7 \cdot 10^6 \, \mathrm{m} \)
+- \( g = 9.8 \, \mathrm{m/s^2} \)
+
+Plug in these values and solve:
+
+\( v = \sqrt{(1) \cdot (9.8) \cdot (6.7 \cdot 10^6)} \)
+
+\( v = \sqrt{(9.8) \cdot (6.7 \cdot 10^6)} \)
+
+\( v = \sqrt{65.66 \cdot 10^6} \)
+
+\( v = \sqrt{6.566 \cdot 10^7} \)
+
+\( v = \sqrt{6.566E+7} \)
+
+\( v \approx 8.1 \cdot 10^3 \, \mathrm{m/s} \)
+
+< A > 8100 m/s < /A >";
+Graduate;M2;A fluid flows through a pipe with a cross-sectional area of \( A = 0.05 \, \mathrm{m^2} \) and velocity \( v = 2 \, \mathrm{m/s} \). What is the volume flow rate?;A=0.05 m^2, v=2 m/s;A:0.05, v:2;A*v;\( 0.05 \times 2 = 0.1 \, \mathrm{m^3/s}. \);0.1;m^3/s;"def solve(A;a;v): flow=A*v;return f'{flow} m^3/s'";"Q1
+The volume flow rate can be calculated using the formula:
+
+Volume flow rate (Q) = cross-sectional area (A) × velocity (v)
+
+Given:
+- Cross-sectional area (A) = 0.05 m^2
+- Velocity (v) = 2 m/s
+
+We substitute these values into the formula:
+
+Q = A × v
+= 0.05 m^2 × 2 m/s
+= 0.1 m^3/s
+
+<A> 0.1 m^3/s <\A>";0.1 m^3/s
+Graduate;M1;An ideal Carnot engine operates between a hot reservoir at \( T_H = 600 \, \mathrm{K} \) and a cold reservoir at \( T_C = 300 \, \mathrm{K} \). The engine absorbs \( Q_H = 5000 \, \mathrm{J} \) of heat from the hot reservoir. What is the efficiency of the engine and how much work is done?;TH=600 K, TC=300 K, QH=5000 J;TH:600, TC:300, QH:5000;1 - (TC/TH);Efficiency = \( 1 - \frac{300}{600} = 0.5 \), Work = 2500 \,\mathrm{J}.;2500.0;J;"def solve(TH;a;TC;QH): eta=1-(TC/TH);work=eta*QH;return f'Eff={eta*100:.1f}%,Work={work} J'";"Q1
+
+The efficiency of a Carnot engine can be found using the formula:
+
+η = 1 - (T_C / T_H)
+
+where η is the efficiency, T_C is the temperature of the cold reservoir, and T_H is the temperature of the hot reservoir.
+
+First, we need to plug in the given values for T_C and T_H into the equation. The temperature of the hot reservoir, T_H = 600 K. The temperature of the cold reservoir, T_C = 300 K.
+
+η = 1 - (300 / 600)
+= 1 - 0.5
+= 0.5
+
+The efficiency of the engine is 50%.
+
+To find the work done by the engine, we can use the equation:
+
+W = Q_H * η
+
+We know that Q_H = 5000 J and η = 0.5.
+
+W = 5000 * 0.5
+= 2500 J
+
+The work done by the engine is 2500 J.
+
+<A> 50 % <\A>
+<A> 2500 J <\A>";50 %
+Doctorate;PhD;A neutron star has a mass of \( M = 1.4 \, M_\odot \) and a radius of \( R = 10 \, \mathrm{km} \). What is the escape velocity at its surface?;M=1.4 Msun, R=10 km;M:1.4, R:10;((2*G*M)/R)**0.5;Escape velocity: ... ~6.09e8 m/s;609000000.0;m/s;"def solve(G;a;M;R): ve=((2*G*M)/R)**0.5;return f'{ve} m/s'";"To find the escape velocity from the surface of the neutron star, we can use the formula:
+
+\[ v_{\text{escape}} = \sqrt{\frac{2GM}{R}} \]
+
+where \( G \) is the gravitational constant, \( M \) is the mass of the neutron star, and \( R \) is its radius.
+
+Given:
+- Mass of neutron star: \( M = 1.4 \, M_\odot \)
+- Radius of neutron star: \( R = 10 \, \mathrm{km} \)
+
+First, let's convert everything to the same units for simplicity. We'll use kilograms for mass and meters for distance.
+
+Given that:
+\[ M = 1.4 \, M_\odot \]
+and
+\[ M_\odot = 2 \times 10^{30} \, \mathrm{kg} \]
+
+We have:
+\[ M = 1.4 \times 2 \times 10^{30} \, \mathrm{kg} = 2.8 \times 10^{30} \, \mathrm{kg} \]
+
+The radius needs to be converted from kilometers to meters:
+\[ R = 10 \, \mathrm{km} = 10^4 \, \mathrm{meters} \]
+
+Now, we use the gravitational constant in appropriate units. \( G = 6.67408 \times 10^{-11} \, \frac{\mathrm{Nm}^2}{\mathrm{kg}^2} \)
+
+Substituting these values into our formula:
+
+\[ v_{\text{escape}} = \sqrt{\frac{2G(2.8 \times 10^{30})}{10^4}} \]
+
+\[ v_{\text{escape}} = \sqrt{\frac{2 \times 6.67408 \times 10^{-11} \times 2.8 \times 10^{30}}{10^4}} \]
+
+Simplifying and calculating the numerator first:
+
+\[ 2 \times 6.67408 \times 10^{-11} \times 2.8 \times 10^{30} = 37.311456 \, \mathrm{Nm} \]
+
+\[ v_{\text{escape}} = \sqrt{\frac{37.311456}{10^4}} \]
+
+\[ v_{\text{escape}} = \sqrt{3.7311456 \times 10^{-3}} \]
+
+\[ v_{\text{escape}} \approx 0.06104 \, \mathrm{km/s} \]
+
+Therefore, the escape velocity at the surface of this neutron star is:
+
+<A> 61 km/s <\A>";61 km/s
+Graduate;M1;Water flows through a horizontal pipe with a cross-sectional area of \( A_1 = 0.2 \, \mathrm{m^2} \) at a velocity of \( v_1 = 3 \, \mathrm{m/s} \). The pipe narrows to a cross-sectional area of \( A_2 = 0.05 \, \mathrm{m^2} \). What is the velocity of water in the narrower section?;A1=0.2 m^2, v1=3 m/s, A2=0.05 m^2;A1:0.2, v1:3, A2:0.05;(A1*v1)/A2;Using continuity: \( v_2 = 12 \,\mathrm{m/s}. \);12.0;m/s;"def solve(A1;a;v1;A2): v2=(A1*v1)/A2;return f'{v2} m/s'";"Q1
+The problem describes a situation where water flows through a horizontal pipe with two sections having different cross-sectional areas and velocities. We are asked to find the velocity of the water in the narrower section, given certain conditions.
+
+To solve this, we will apply the principle of conservation of mass and the equation of continuity, which states that the product of the area of the pipe and the velocity of the fluid is constant throughout the pipe.
+
+First, let's denote the velocities in the two sections as \( v_1 = 3 \, \mathrm{m/s} \) (given) and \( v_2 \), which we need to find. The areas are given as \( A_1 = 0.2 \, \mathrm{m^2} \) and \( A_2 = 0.05 \, \mathrm{m^2} \).
+
+The equation of continuity is:
+\[A_1 v_1 = A_2 v_2\]
+
+Given that \( A_1 = 0.2 \, \mathrm{m^2} \), \( v_1 = 3 \, \mathrm{m/s} \), and \( A_2 = 0.05 \, \mathrm{m^2} \), we can substitute these values into the equation:
+\[ (0.2 \, \mathrm{m^2}) (3 \, \mathrm{m/s}) = (0.05 \, \mathrm{m^2}) v_2\]
+
+Simplifying both sides of the equation gives us:
+\[ 0.6 \, \mathrm{m^2/s} = 0.05 \, \mathrm{m^2} v_2\]
+
+To solve for \(v_2\), we divide both sides by \( A_2 \):
+\[ v_2 = \frac{0.6 \, \mathrm{m^2/s}}{0.05 \, \mathrm{m^2}}\]
+Simplifying the expression:
+\[ v_2 = 12 \, \mathrm{m/s}\]
+
+Therefore, the velocity of water in the narrower section is \( 12 \, \mathrm{m/s} \).
+
+The final answer is: 
+<A> 12 m/s <\A>";12 m/s
+Undergraduate;L3;A chemical reaction releases \( Q = 1500 \, \mathrm{J} \) of energy into \( 0.5 \, \mathrm{kg} \) of water. If the specific heat capacity of water is \( c = 4184 \, \mathrm{J/(kg \cdot K)} \), what is the temperature change?;Q=1500 J, m=0.5 kg, c=4184 J/(kg*K);Q:1500, m:0.5, c:4184;Q/(m*c);\( 1500/(0.5 \times 4184) = 0.717 \,\mathrm{K}. \);0.717;K;"def solve(Q;a;m;c): dT=Q/(m*c);return f'{dT} K'";"Q1
+Step 1: Recall the formula to calculate temperature change using energy released and specific heat capacity.
+The formula to calculate the temperature change is given by:
+\[ \Delta T = \frac{Q}{mc} \]
+where \( Q \) is the amount of energy released, \( m \) is the mass of water, and \( c \) is the specific heat capacity of water.
+
+Step 2: Plug in the values into the formula.
+Given values are:
+- Energy released, \( Q = 1500 \, \mathrm{J} \)
+- Mass of water, \( m = 0.5 \, \mathrm{kg} \)
+- Specific heat capacity of water, \( c = 4184 \, \mathrm{J/(kg \cdot K)} \)
+
+Substituting these values into the formula:
+\[ \Delta T = \frac{1500}{(0.5) \times (4184)} \]
+
+Step 3: Perform the calculation.
+Carrying out the arithmetic operation within the fraction first by multiplying \( 0.5 \, \mathrm{kg} \) and \( 4184 \, \mathrm{J/(kg \cdot K)} \):
+\[ 0.5 \times 4184 = 2092 \, \mathrm{J/K} \]
+Then divide the energy released by this result:
+\[ \Delta T = \frac{1500}{2092} \]
+
+Step 4: Calculate the final value of ΔT.
+To find the temperature change \( \Delta T \), perform the division:
+\[ \Delta T = \frac{1500}{2092} \approx 0.7168 \, \mathrm{K} \]
+
+Since we're solving for a quantity that is by definition already in Kelvin (for temperature changes):
+<ΔT> 0.717 K <\ΔT>";
+Graduate;M1;A satellite orbits Earth at a distance of \( r = 7.0 \cdot 10^6 \, \mathrm{m} \). Using Earth's gravitational constant \( g = 9.8 \, \mathrm{m/s^2} \), calculate its orbital speed.;r=7.0e6 m, g=9.8 m/s^2;r:7.0e6, g:9.8;(g*r)**0.5;\( \sqrt{9.8 \times 7.0\times10^6} = 8.29\times10^3 \,\mathrm{m/s}. \);8290.0;m/s;"def solve(r;a;g): v=(g*r)**0.5;return f'{v} m/s'";"Q1
+The orbital speed of the satellite can be calculated using the formula for centripetal acceleration, which is provided by Newton's law of universal gravitation.
+
+a_c = (G \* M) / r^2
+
+where:
+- a_c is the centripetal acceleration,
+- G is the gravitational constant (\(6.674 \cdot 10^{-11} \mathrm{Nm^2/kg^2}\)),
+- M is the mass of Earth (\(5.972 \cdot 10^{24} kg\)), and
+- r is the distance from the center of Earth to the satellite.
+
+The centripetal acceleration equals the gravitational force per unit mass, or F / m:
+
+a_c = (G \* M) / r^2
+
+To find the orbital speed v, we need to use the formula for centripetal acceleration:
+
+a_c = v^2 / r
+
+So we can set these two equations equal to each other and solve for v.
+
+v^2 = a_c * r
+v = sqrt(a_c * r)
+
+We will first calculate the gravitational constant times mass of Earth, G \* M, then plug it into our equation to find v:
+
+G \* M = (6.674 \cdot 10^{-11})\* (5.972 \cdot 10^{24})
+= 39.79 \cdot 10^{13}
+
+Now we can substitute this value and the radius of Earth's orbit r into the formula for v:
+
+v = sqrt((39.79 \cdot 10^{13})(7.0 \cdot 10^6))
+= sqrt(2.7723 \cdot 10^{20})
+= 5.288 \cdot 10^9 m/s
+
+So, the orbital speed of this satellite is approximately:
+<A> 5288 million m/s <\A>";5288 million m/s
+Doctorate;PhD;A photon has an energy of \( E = 4.0 \, \mathrm{eV} \). Convert this energy into joules using \( 1 \, \mathrm{eV} = 1.602 \cdot 10^{-19} \, \mathrm{J} \).;E=4.0 eV, 1eV=1.602e-19 J;E:4.0, 1eV:1.602e-19;E_eV*1.602e-19;\( 4.0 \times 1.602\times10^{-19} = 6.408\times10^{-19} \,\mathrm{J}. \);6.408e-19;J;"def solve(E_eV;a): E_J=E_eV*a;return f'{E_J} J'";"Q1
+The given problem involves the conversion of the energy of a photon from electronvolts (eV) to joules (J).
+
+We're provided with the conversion factor: \( 1 \, \mathrm{eV} = 1.602 \cdot 10^{-19} \, \mathrm{J} \). This means that 1 eV is equal to a very small amount of energy in joules.
+
+The given energy of the photon is \( E = 4.0 \, \mathrm{eV} \), and we need to convert it into joules.
+
+First, let's understand what we're doing here. We're essentially multiplying the given energy by the conversion factor to get the equivalent amount in joules.
+
+\( E_{\text{joules}} = E_{\text{eV}} \times 1.602 \cdot 10^{-19} \, \mathrm{J/eV} \)
+
+Here, \( E_{\text{joules}} \) represents the energy in joules and \( E_{\text{eV}} \) is the given energy in eV.
+
+Substituting the values:
+\( E_{\text{joules}} = 4.0 \, \mathrm{eV} \times 1.602 \cdot 10^{-19} \, \mathrm{J/eV} \)
+
+Performing the multiplication:
+\( E_{\text{joules}} = (4.0) \times (1.602 \cdot 10^{-19}) \)
+\( E_{\text{joules}} = 6.408 \cdot 10^{-19} \, \mathrm{J} \)
+
+Thus, the energy of the photon in joules is:
+<A> 6.408 x 10^-19 J <\A>";6.408 x 10^-19 J
+Graduate;M2;A mass-spring-damper system is described by the differential equation: \[ m \frac{d^2 x}{dt^2} + c \frac{dx}{dt} + kx = 0 \], where \( m = 1 \, \mathrm{kg} \), \( c = 2 \, \mathrm{Ns/m} \), and \( k = 5 \, \mathrm{N/m} \). Determine the natural frequency of the system and classify the damping.;m=1 kg, c=2 Ns/m, k=5 N/m;m:1, c:2, k:5;(k/m)**0.5;The system is underdamped ... \(\omega_n=2.236\).;2.236;rad/s;"def solve(m;a;c;k): w=(k/m)**0.5;damped='underdamped' if c*c<4*m*k else 'overdamped';return f'{w} rad/s,{damped}'";"Q1
+
+To determine the natural frequency of the system, we can rearrange the differential equation to solve for the frequency. The natural frequency is given by:
+
+\[ \omega_n = \sqrt{\frac{k}{m}} \]
+
+First, let's substitute the given values into this expression.
+
+\[ \omega_n = \sqrt{\frac{5\, \mathrm{N/m}}{1\, \mathrm{kg}}} \]
+
+Now, let's simplify the expression.
+
+\[ \omega_n = \sqrt{5} \, \mathrm{rad/s} \]
+
+Evaluating the square root of 5 gives:
+
+\[ \omega_n \approx 2.23607 \, \mathrm{rad/s} \]
+
+Therefore, the natural frequency of the system is approximately 2.24 rad/s.
+
+Next, to classify the damping, we need to calculate the ratio of critical damping (c_{crit}) to actual damping coefficient (c). The formula for critical damping is:
+
+\[ c_{\text{crit}} = 2 \sqrt{k m} \]
+
+Substituting the given values into this expression gives:
+
+\[ c_{\text{crit}} = 2 \sqrt{(5\, \mathrm{N/m})(1\, \mathrm{kg})} \]
+
+Simplifying and evaluating this expression yields:
+
+\[ c_{\text{crit}} = 2 \sqrt{5}\, \mathrm{Ns/m} \approx 4.47214\, \mathrm{Ns/m} \]
+
+Now, we can calculate the ratio of critical damping to actual damping coefficient.
+
+\[ \frac{c_{\text{crit}}}{c} = \frac{4.47214\, \mathrm{Ns/m}}{2\, \mathrm{Ns/m}} \approx 2.23607 \]
+
+Since this ratio is greater than 1, the system has a high amount of damping.
+
+In conclusion, the natural frequency of the system is approximately 2.24 rad/s, and the system exhibits high damping.
+
+<A> 2.24 rad/s <\A>";2.24 rad/s
+Undergraduate;L3;A medication dosage is calculated based on a patient's weight of \( 80 \, \mathrm{kg} \). The prescribed dosage is \( 2.5 \, \mathrm{mg/kg} \). What is the total medication dose required?;weight=80 kg, dosage=2.5 mg/kg;weight:80, dosage:2.5;weight * mg_per_kg;\( 80 \times 2.5 = 200 \,\mathrm{mg}. \);200.0;mg;"def solve(weight;a;dosage): total=weight*dosage;return f'{total} mg'";"To find the total medication dose required, we can simply multiply the patient's weight by the prescribed dosage.
+
+Step 1: Identify the variables
+- Patient's weight = \(80 \, \mathrm{kg}\)
+- Prescribed dosage per unit mass (mg/kg) = \(2.5 \, \mathrm{mg/kg}\)
+
+Step 2: Calculate the total medication dose required
+\[ \text{Total medication dose} = \text{Patient's weight} \times \text{Prescribed dosage} \]
+
+\[ \text{Total medication dose} = 80 \, \mathrm{kg} \times 2.5 \, \mathrm{mg/kg} \]
+
+Step 3: Perform the multiplication
+\[ \text{Total medication dose} = 200 \, \mathrm{mg} \]
+
+Therefore,
+<A> 200 mg <\A>";200 mg
+Graduate;M1;In a financial account, an initial deposit of $1000 earns an annual interest rate of 5% compounded annually. How much money is in the account after 3 years?;P=1000, r=0.05, t=3;P:1000, r:0.05, t:3;P*(1+r)**t;\( 1000 \times (1+0.05)^{3} = 1157.63 \,\mathrm{USD}. \);1157.63;USD;"def solve(P;a;r;t): A=P*((1+r)**t);return f'${A} USD'";"Q1
+To solve this problem, we will use the formula for compound interest:
+
+A = P(1 + r)^n
+
+where A is the final amount, P is the principal (initial deposit), r is the annual interest rate as a decimal, and n is the number of years.
+
+Given:
+P = $1000
+r = 5% = 0.05
+n = 3 years
+
+We will substitute these values into the formula:
+
+A = 1000(1 + 0.05)^3
+
+First, we calculate the expression inside the parentheses:
+
+(1 + 0.05) = 1.05
+
+Now, we raise this result to the power of 3:
+
+(1.05)^3 ≈ 1.157625
+
+Finally, we multiply this result by the principal amount ($1000):
+
+A ≈ 1000 × 1.157625
+A ≈ 1157.63
+
+Therefore, after 3 years, the account will have approximately $1157.63.
+
+<A> 1157.63 <\A>";1157.63
+Doctorate;PhD;An electron is confined in a one-dimensional quantum well of width \( L = 2 \, \mathrm{nm} \). What is the energy of the first excited state? Use the formula: \[ E_n = \frac{n^2 h^2}{8 m_e L^2} \], where \( h = 6.626 \cdot 10^{-34} \, \mathrm{J \cdot s} \), \( m_e = 9.109 \cdot 10^{-31} \, \mathrm{kg} \), and \( n = 2 \).;L=2 nm, n=2, h=6.626e-34 J*s, m_e=9.109e-31 kg;L:2, n:2, h:6.626e-34, m_e:9.109e-31;(n**2*(h**2))/(8*m_e*(L**2));Substituting ... ~1.5e-19 J;1.5e-19;J;"def solve(L;a;n;h;m_e): E=(n*n*(h*h))/(8*m_e*((L*1e-9)**2));return f'{E} J'";"To find the energy of the first excited state, we'll use the given formula with n = 2.
+
+Step 1: Identify the values for each variable.
+- h = 6.626 × 10^−34 J ⋅ s
+- m_e = 9.109 × 10^−31 kg
+- L = 2 nm (which we'll convert to meters) = 2 × 10^−9 m
+- n = 2
+
+Step 2: Plug these values into the formula E_n = \frac{n^2 h^2}{8 m_e L^2}.
+
+E_2 = \frac{(2)^2 (6.626 × 10^−34 J ⋅ s)^2}{8 (9.109 × 10^−31 kg) (2 × 10^−9 m)^2}
+
+Step 3: Simplify the expression within E_2.
+
+E_2 = \frac{(4)(43.93 × 10^−68 J^2 ⋅ s^2)}{8(18.42 × 10^−39 kg ⋅ m^2)}
+
+Step 4: Perform the multiplication operations and then divide to simplify further.
+
+
+First, calculate the numerator:
+(4) (43.93 × 10^−68 J^2 ⋅ s^2) = 175.72 × 10^−68 J^2 ⋅ s^2
+
+Then, calculate the denominator:
+
+Next, perform the division.
+E_2 = \frac{(175.72 × 10^−68 J^2 ⋅ s^2)}{147.36 × 10^−38 kg ⋅ m^2}
+
+Now, divide numerator by denominator:
+\frac{(175.72 × 10^−68 J^2 ⋅ s^2)}{147.36 × 10^−38 kg ⋅ m^2} = (1.19 × 10^−30) J/kg
+
+Step 5: Convert the result from joules per kilogram to a more suitable unit for this context if needed. The energy is typically represented in electronvolts (eV), where 1 eV = 1.60217657 × 10^−19 J.
+
+First, convert J/kg to J:
+(1.19 × 10^−30) kg ⋅ m^2/s^2 * (kg/m^3) ≈ (1.19 × 10^−30) J
+
+
+Now, divide by 1.60217657 × 10^−19 J/eV to get the result in eV.
+
+\frac{(1.19 × 10^−30)}{1.60217657 × 10^−19} = (7.43 × 10^−12) eV
+
+Step 6: Since we are working with extremely small values, it would be more appropriate to express this energy in terms of electronvolts per particle (eV), considering the original context was about electrons.
+
+
+\frac{(7.43 × 10^−12)}{1} = (7.43 × 10^−12) eV/electron
+
+The final answer is:
+<A> 7.43 × 10^−12 eV <\A>";7.43 × 10^−12 eV
+High School;Seconde;A train starts from rest and accelerates uniformly at \( a = 2 \, \mathrm{m/s^2} \) for \( t = 10 \, \mathrm{s} \). What distance does it cover in that time?;a=2 m/s^2, t=10 s;a:2, t:10;0.5 * a * (t**2);\( \frac12 \times 2 \times 10^2 = 100 \,\mathrm{m}. \);100;m;"def solve(a;b;t): dist=0.5*a*(t**2);return f'{dist} m'";"Q1
+The acceleration of the train is given as \( a = 2 \, \mathrm{m/s^2} \), and it accelerates uniformly over a period of time \( t = 10 \, \mathrm{s} \). To find the distance covered by the train during this time, we can use the equation for uniformly accelerated motion:
+
+\[ d = ut + \frac{1}{2}at^2 \]
+
+In this case, the initial velocity \( u \) is zero, since the train starts from rest. Therefore, the equation simplifies to:
+
+\[ d = 0t + \frac{1}{2}a t^2 \]
+\[ d = \frac{1}{2} \times 2 \, \mathrm{m/s^2} \times (10\, \mathrm{s})^2 \]
+
+Solving for \( d \):
+
+\[ d = \frac{1}{2} \times 200 \, \mathrm{m^2/s^2} \]
+\[ d = 100 \, \mathrm{m} \]
+
+So the train covers a distance of:
+
+<A> 100 m <\A>";100 m
+Undergraduate;L3;A gas undergoes an isothermal expansion, doubling its initial volume. The initial pressure is \( P_1 = 100 \, \mathrm{kPa} \). What is the final pressure?;P1=100 kPa;P1:100;P1/2;For isothermal expansion ... \( P_2 = 50 \, \mathrm{kPa} \).;50;kPa;"def solve(P1): p2=P1/2;return f'{p2} kPa'";"Q1
+For an isothermal process, we know that the temperature remains constant. The relationship between pressure and volume in this scenario can be described using Boyle's Law, which states:
+\[P_1 V_1 = P_2 V_2\]
+
+Given that the initial pressure \( P_1 \) is 100 kPa and that the volume doubles (\( V_2 = 2V_1 \)), we need to find the final pressure \( P_2 \).
+
+Substituting these values into Boyle's Law:
+\[P_1 V_1 = P_2 (2V_1)\]
+
+Simplifying by dividing both sides of the equation by \( V_1 \):
+\[P_1 = 2P_2\]
+
+To solve for \( P_2 \), we'll divide both sides of the equation by 2:
+\[P_2 = \frac{P_1}{2}\]
+
+Substituting \( P_1 = 100 \, \mathrm{kPa} \) into the formula gives us:
+\[P_2 = \frac{100}{2} = 50\]
+
+So, the final pressure after doubling the initial volume in an isothermal expansion process is 50 kPa.
+
+<A> 50 kPa <\A>";50 kPa
+Graduate;M1;A block of mass \( m = 5 \, \mathrm{kg} \) is pushed with a force of \( F = 20 \, \mathrm{N} \) on a frictionless surface. What is its acceleration?;m=5 kg, F=20 N;m:5, F:20;F/m;\( 20/5=4 \,\mathrm{m/s^2}. \);4;m/s²;"def solve(m;a;F): a_=F/m;return f'{a_} m/s^2'";"Q1
+The acceleration of the block can be found using Newton's second law of motion, which states that the net force acting on an object is equal to the mass of the object multiplied by its acceleration (F = ma).
+
+First, we need to ensure that the units are consistent. The mass of the block is given as 5 kg and the force applied is 20 N.
+
+Next, we can plug in the values into the equation F = ma:
+
+F = 20 N
+m = 5 kg
+
+To find the acceleration (a), we divide both sides of the equation by m:
+
+a = F / m
+= 20 N / 5 kg
+= 4 N/kg
+
+Since acceleration is typically measured in units of meters per second squared, we can multiply the result by 1 kg / 1 kg to get:
+
+a = 4 (N/kg) × (kg m/s^2) / (kg)
+= 4 m/s^2
+
+< A > 4 m/s^2 < /A >";
+Doctorate;PhD;A wave travels with a frequency of \( f = 500 \, \mathrm{Hz} \) and a wavelength of \( \lambda = 0.68 \, \mathrm{m} \). What is its speed?;f=500 Hz, lambda=0.68 m;f:500, lambda:0.68;f * lambda;\( 500 \times 0.68 = 340 \,\mathrm{m/s}. \);340;m/s;"def solve(f;a;lambda): v=f*lambda;return f'{v} m/s'";"Q1
+The speed of a wave can be determined using the formula v = λf, where λ represents the wavelength and f represents the frequency.
+First, we identify the given values: f = 500 Hz and λ = 0.68 m. 
+Next, substitute these values into the equation for wave speed: v = (0.68) × (500).
+Perform the multiplication operation: v = 340.
+Therefore, the speed of the wave is given by:
+<A> 340 m/s <\A>";340 m/s
+Middle School;4ème;Convert a speed of \( 72 \, \mathrm{km/h} \) into meters per second.;v_km/h=72;v_km/h:72;(v_km/h*1000)/3600;\( 72 \times 1000 / 3600 = 20 \,\mathrm{m/s}. \);20;m/s;"def solve(v;a): vms=v*1000/3600;return f'{vms} m/s'";"Q1
+To convert the speed from kilometers per hour to meters per second, we'll follow these steps:
+
+Step 1: Convert kilometers to meters
+We know that \( 1 \, \mathrm{km} = 1000 \, \mathrm{m} \). Therefore, we can write:
+\[ 72 \, \mathrm{km} = 72 \times 1000 \, \mathrm{m} = 72000 \, \mathrm{m} \]
+
+Step 2: Convert hours to seconds
+There are \( 60 \) minutes in an hour and \( 60 \) seconds in a minute. Therefore, we can write:
+\[ 1 \, \mathrm{hour} = 60 \times 60 \, \mathrm{seconds} = 3600 \, \mathrm{seconds} \]
+
+Step 3: Convert speed from kilometers per hour to meters per second
+Now that we have the conversions for both distance and time, we can plug in our values:
+\[ 72 \frac{\mathrm{km}}{\mathrm{hour}} = \frac{72000 \, \mathrm{m}}{3600 \, \mathrm{s}} \]
+\[ = \frac{72000}{3600} \, \mathrm{m/s} \]
+\[ = 20 \, \mathrm{m/s} \]
+
+<A> 20 m/s <\A>";20 m/s
